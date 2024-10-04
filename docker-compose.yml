@@ -1,0 +1,9 @@
+name: dev-email
+services:
+    mailpit:
+        restart: unless-stopped
+        container_name: mailpit
+        ports:
+            - 8025:8025
+            - 1025:1025
+        image: axllent/mailpit
